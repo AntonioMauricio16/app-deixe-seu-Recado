@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="indexlogin.js"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <form onsubmit="enviarForm(event)">
+        <h1>Cadastro de Usuario</h1>
+        <label>Nome</label>
+        <input type="text" id="nome_id" name="nome" placeholder="nome">
+        <br>
+        <label>E-mail</label>
+        <input type="text" id="email_id" name="email" placeholder="e-mail">
+        <br>
+        <label>Senha</label>
+        <input type="password" id="senha_id" name="senha" placeholder="senha">
+        <br>
+         <button type="submit">Enviar</button>
+        <h5 class="criar-conta">
+            Ainda não tem uma conta? <a href="./login.html">Fazer Login</a>
+          </h5>
+    </form>
+</body>
+</html>
