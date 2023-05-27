@@ -90,7 +90,10 @@ function login(event){
     window.location.href = "listar.html"
     localStorage.setItem("usuario",email)
   })
-  .catch((err)=>{alert("Usuario não encontrado.")})
+  .catch((err)=>{
+    alert("Usuario não encontrado.")
+    window.location.href = "cadastro.html"
+  })
 
   
   mostrarRecados();
