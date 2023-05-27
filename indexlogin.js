@@ -22,7 +22,7 @@ const api = axios.create({
       .post("/usuarios",form)
       .then((res) => alert(res)) // certo
       .catch((err) => {
-        return console.log(err.response.data);
+        return alert("tente novamnete");
       }); //errado
   }
   function entrar(event) {
