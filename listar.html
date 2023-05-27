@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/indexlogin.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  
+    <div id="mostrarRecados" style="display: none;">
+        <h1>Crie seu recado</h1>
+            <form id="recados" onsubmit="criarRecados(event)">
+                <input type="text" id="tituloRecado" placeholder="titulo">
+                
+                <input type="text" id="descricaoRecado" placeholder="recado">
+        
+                    <button onclick="mostrarRecados()">Criar recado</button>
+            </form>
+
+        <h2>Lista de Recados</h2>
+        <div id="messagesList"></div>
+    </div>
+    <section id="paginacao">
+        <button onclick="paginaAnterior()">anterior</button>
+        <button onclick="proximaPagina()">proximo</button>
+    </section>
+
+</body>
+</html>
