@@ -5,7 +5,7 @@ window.onload = function () {
   };
   
 const api = axios.create({
-    baseURL: "http://localhost:8080/",
+    baseURL: "http://localhost:8081/",
   });
   
   function enviarForm(event) {
@@ -43,7 +43,7 @@ const api = axios.create({
         sessionStorage.setItem("UserName",email)
         window.location.href = "recados.html"
         })
-      .catch((err) => alert(err.response.data)); 
+      .catch((err) => alert(err.respons.data)); 
    }
    
   
