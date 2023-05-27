@@ -14,7 +14,11 @@
     <h1>Cadastre-se</h1>
     <form onsubmit="criarUsuario(event)">
         <input id="nome" type="nome" placeholder="nome">
+        <br>
+        <br>
         <input id="email" type="email" placeholder="email">
+        <br>
+        <br>
         <input id="password" type="password" placeholder="senha">
         <button>Criar</button>
     </form>
@@ -26,6 +30,8 @@
     <h1>Login</h1>
     <form onsubmit="login(event)">
         <input id="email" type="email" placeholder="email">
+        <br>
+        <br>
         <input id="password" type="password" placeholder="senha">
         <button>Logar</button>
     </form>
@@ -37,6 +43,7 @@
         <h1>Crie seu recado</h1>
             <form id="recados" onsubmit="criarRecados(event)">
                 <input type="text" id="tituloRecado" placeholder="titulo">
+                
                 <input type="text" id="descricaoRecado" placeholder="recado">
         
                     <button onclick="mostrarRecados()">Criar recado</button>
