@@ -41,7 +41,6 @@ const api = axios.create({
       .then(() => {
         alert("Usuario Logado!")
         sessionStorage.setItem("UserName",email)
-        sessionStorage.setItem("UserName",senha)
         window.location.href = "recados.html"
         })
       .catch((err) => alert(err.response.data)); 
