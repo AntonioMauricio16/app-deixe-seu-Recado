@@ -1,0 +1,14 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+#messagesList{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card{
+    border: groove;
+}

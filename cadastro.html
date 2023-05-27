@@ -1,29 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="indexlogin.js"></script>
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="./">
+    <script src="./script.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    <form onsubmit="enviarForm(event)">
-        <h1>Cadastro de Usuario</h1>
-        <label>Nome</label>
-        <input type="text" id="nome_id" name="nome" placeholder="nome">
-        <br>
-        <label>E-mail</label>
-        <input type="text" id="email_id" name="email" placeholder="e-mail">
-        <br>
-        <label>Senha</label>
-        <input type="password" id="senha_id" name="senha" placeholder="senha">
-        <br>
-         <button type="submit">Enviar</button>
-        <h5 class="criar-conta">
-            Ainda não tem uma conta? <a href="./login.html">Fazer Login</a>
-          </h5>
+    <div id="cadastrar">
+    <h1>Cadastre-se</h1>
+    <form onsubmit="criarUsuario(event)">
+        <input id="email" type="email" placeholder="email">
+        <input id="password" type="password" placeholder="senha">
+        <button>Criar</button>
     </form>
+</div>
+<br>
+<br>
+<br>
+<div id="logar">
+    <h1>Login</h1>
+    <form onsubmit="login(event)">
+        <input id="email" type="email" placeholder="email">
+        <input id="password" type="password" placeholder="senha">
+        <button>Logar</button>
+    </form>
+</div>
+<br>
+<br>
+<br>
+    <div id="mostrarRecados" style="display: none;">
+        <h1>Crie seu recado</h1>
+            <form id="recados" onsubmit="criarRecados(event)">
+                <input type="text" id="tituloRecado" placeholder="titulo">
+                <input type="text" id="descricaoRecado" placeholder="recado">
+        
+                    <button onclick="mostrarRecados()">Criar recado</button>
+            </form>
+
+        <h2>Lista de Recados</h2>
+        <div id="messagesList"></div>
+    </div>
+    <section id="paginacao">
+        <button onclick="paginaAnterior()">anterior</button>
+        <button onclick="proximaPagina()">proximo</button>
+    </section>
+
 </body>
 </html>

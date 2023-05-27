@@ -4,6 +4,7 @@ const app = express();
 const cors = require("cors");
 app.use(express.json());
 app.use(cors("*"));
+app.listen(8081, () => console.log("Servidor iniciado"));
 
 
 
@@ -67,4 +68,3 @@ app.get("/recados", (request, response) => {
 
 
 
-app.listen(3333, () => console.log("Servidor iniciado"));
