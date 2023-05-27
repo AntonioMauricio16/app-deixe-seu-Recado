@@ -14,7 +14,7 @@ app.use(cors({
 app.get('/', (request, response) => {
   return response.json('OK');
 });
-app.listen(8081, () => console.log("Servidor iniciado"));
+app.listen(8080, () => console.log("Servidor iniciado"));
 
 
 let usuarios = []
