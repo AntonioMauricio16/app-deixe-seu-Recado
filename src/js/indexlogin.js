@@ -88,8 +88,7 @@ function login(event){
   .then((res)=>{
     alert("Usuario logado com sucesso!")
     window.location.href = "listar.html"
-    const id = res.data.id
-    localStorage.setItem("usuario",id)
+    localStorage.setItem("usuario",email)
   })
   .catch((err)=>{alert("Usuario não encontrado.")})
 
