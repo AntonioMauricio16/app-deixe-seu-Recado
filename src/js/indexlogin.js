@@ -1,4 +1,6 @@
-
+window.onload = function () {
+  mostrarRecados();
+};
 const api = axios.create({
   baseURL: "http://localhost:8081/"
 })
@@ -86,6 +88,8 @@ function login(event){
   .then((res)=>{
     alert("Usuario logado com sucesso!")
     window.location.href = "listar.html"
+    const id = res.data.id
+    localStorage.setItem("usuario",id)
   })
   .catch((err)=>{alert("Usuario não encontrado.")})
 
