@@ -20,10 +20,8 @@ const api = axios.create({
     };
     api
       .post("/usuarios",form)
-      .then((res) => alert(res.request.data)) // certo
-      .catch((err) => {
-        return alert("tente novamnete");
-      }); //errado
+      .then((res) =>  alert("usuario cadastrado!")) // certo
+      .catch((err) => alert("tente novamnete")); //errado
   }
   function entrar(event) {
     event.preventDefault();
