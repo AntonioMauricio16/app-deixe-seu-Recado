@@ -21,6 +21,7 @@ app.post("/criar", (request, response)=>{
     }else{
       usuarios.push({
         id: Math.floor(Math.random()*67676),
+        nome: usuario.nome,
         email: usuario.email,
         senha: usuario.senha    
       })
