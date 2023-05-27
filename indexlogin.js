@@ -19,10 +19,10 @@ const api = axios.create({
       senha: senha,
     };
     api
-      .post("/usuarios", form)
+      .post("/usuarios",form)
       .then((res) => alert(res)) // certo
       .catch((err) => {
-        return console.log(err)
+        return console.log(err.response.data);
       }); //errado
   }
   function entrar(event) {
