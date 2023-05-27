@@ -84,7 +84,6 @@ function login(event){
   api
   .post("/login", form)
   .then((res)=>{
-    sessionStorage.setItem("UserName",nome)
     alert("Usuario logado com sucesso!")})
   .catch((err)=>{alert("Usuario não encontrado.")})
 
