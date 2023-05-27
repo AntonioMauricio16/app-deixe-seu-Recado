@@ -1,20 +1,10 @@
 
-
-import  express, { request } from "express";
-import cors from "cors";
-const bcrypt = require('bcrypt');
-app.use(express.json());
+import express, { request, response } from 'express';
+const app = express();
 const cors = require("cors");
-app.use(cors());
-app.use(cors({
-  origin: "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-}));
-app.get('/', (request, response) => {
-  return response.json('OK');
-});
-app.listen(8080, () => console.log("Servidor iniciado"));
+app.use(express.json());
+app.use(cors("*"));
+
 
 
 let usuarios = []
@@ -77,3 +67,4 @@ app.get("/recados", (request, response) => {
 
 
 
+app.listen(8080, () => console.log("Servidor iniciado"));
