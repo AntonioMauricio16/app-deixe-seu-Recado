@@ -84,7 +84,9 @@ function login(event){
   api
   .post("/login", form)
   .then((res)=>{
-    alert("Usuario logado com sucesso!")})
+    alert("Usuario logado com sucesso!")
+    window.location.href = "listar.html"
+  })
   .catch((err)=>{alert("Usuario não encontrado.")})
 
   
