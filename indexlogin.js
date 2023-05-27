@@ -19,7 +19,7 @@ const api = axios.create({
       senha: senha,
     };
     api
-      .post("/user", form)
+      .post("/usuarios", form)
       .then((res) => alert(res)) // certo
       .catch((err) => {
         return console.log(err)
@@ -37,7 +37,7 @@ const api = axios.create({
     };
     
     api
-      .post("/login", form)
+      .post("/usuario/login", form)
       .then(() => {
         alert("Usuario Logado!")
         sessionStorage.setItem("UserName",email)
@@ -48,7 +48,7 @@ const api = axios.create({
    }
    
   
-  function criarRecado() {
+  /*function criarRecado() {
     
     const titulo = document.getElementById("titulo").value;
     const descricao = document.getElementById("descricao").value;
@@ -73,5 +73,5 @@ const api = axios.create({
       })
       .catch((err) => {
         alert(err);
-      });
+      });*/
   }
